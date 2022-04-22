@@ -10,8 +10,7 @@ public class HomeWork2 {
         TaskTwo(-15 );
         TaskThree( 3 );
         TaskFour("*", 6);
-        final int YEAR = 2000;
-        TaskFive(YEAR);
+        TaskFive(1988);
 
     }
 //    method 1
@@ -62,10 +61,30 @@ public class HomeWork2 {
     }
 
 //    Method 5*
-     private static void TaskFive(int YEAR){
+     private static void TaskFive(int year) {
 
-         System.out.println("К сожалению, я так и не смог разобраться с 5й задачей...Возможно, не хватило времени...");
-
+         boolean test = WhatYear(year);
+         if (WhatYear(year)) {
+              System.out.println(year +" " + " Высокосный год ");
+         }
+         else System.out.println(year + " " + "Не высокосный год");
      }
+
+         private static boolean WhatYear(int year){
+             if (year % 400 == 0){
+                 return true;
+             }
+             if (year % 100 == 0){
+                 return false;
+             }
+             if  (year % 4 == 0){
+                 return true;
+             }
+             else {
+             return false;
+             }
+
+
+         }
 
 }
