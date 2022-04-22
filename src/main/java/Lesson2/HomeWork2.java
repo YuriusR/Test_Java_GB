@@ -1,38 +1,71 @@
 package Lesson2;
 
+
 public class HomeWork2 {
 
-    /* method 1 */
+
     public static void main(String[] args) {
 
-        TaskOne (a:12,b:3)
+        TaskOne ( 7, 8);
+        TaskTwo(-15 );
+        TaskThree( 3 );
+        TaskFour("*", 6);
+        final int YEAR = 2000;
+        TaskFive(YEAR);
 
     }
+//    method 1
+    private static void TaskOne(int a, int b){
 
-    private void TaskOne (int a, int b){
-
-       /*nt a=7;
-        int b=-5;
-        int sum = a + b;
+        int sum = (a + b);
         if (sum > 10 && sum < 20)  System.out.println("true");
-        else System.out.println("false");*/
+        else System.out.println("false");
+        System.out.println( " " );
 
-        int result = check(a,b);
-        System.out.println("Результат проверки: " + result);
+
+        }
+
+//    method 2
+    private static void TaskTwo(int i) {
+
+        if (i >=0)
+        System.out.println("Число положительное");
+        else System.out.println("Число отрицательное");
+        System.out.println( " " );
+
     }
 
-     static int check(int c) {
+//    method 3
+    private static void TaskThree(int c){
 
-         int sum = a + b;
-         c = (sum > 10 && sum < 20);
-         return c;
+        boolean d = c>=0;
+        System.out.println(d);
+        System.out.println("  ");
+
+
+    }
+
+//    Method 4
+    private static void TaskFour(String line,int number){
+
+
+        for (int i = 0; i < number ; i++) {
+            for (int j = 0; j < number ; j++) {
+                System.out.print(line + " ");
+            }
+            System.out.println(" ");
+
+        }
+        System.out.println(" ");
+
+
+    }
+
+//    Method 5*
+     private static void TaskFive(int YEAR){
+
+         System.out.println("К сожалению, я так и не смог разобраться с 5й задачей...Возможно, не хватило времени...");
+
      }
-
-
-
-
-
-
-
 
 }
