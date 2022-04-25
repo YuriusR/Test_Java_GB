@@ -13,7 +13,7 @@ public class HomeWork3 {
         Task5(5, 5);
         Task6();
         Task7();
-        Task8(int[] massiv8{1,2,3,4}, -2);
+//        Task8(int[] massiv8{1,2,3,4}, -2);
 
 
     }
