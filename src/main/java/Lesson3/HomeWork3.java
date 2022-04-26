@@ -6,14 +6,14 @@ public class HomeWork3 {
 
     public static void main(String[] args) {
 
-        Task1();
-        Task2();
-        Task3();
-        Task4();
-        Task5(5, 5);
-        Task6();
-        Task7();
-//        Task8(int[] massiv8{1,2,3,4}, -2);
+        task1();
+        task2();
+        task3();
+        task4();
+        task5(5, 5);
+        task6();
+        task7();
+//        task8(int[] massiv8{1,2,3,4}, -2);
 
 
     }
@@ -21,7 +21,7 @@ public class HomeWork3 {
 
 
 
-    private static void Task1() {
+    private static void task1() {
 
         System.out.println("Задание №1 ");
         int[] massiv1 = {1, 0, 0, 1, 1, 0};
@@ -38,7 +38,7 @@ public class HomeWork3 {
         System.out.println(" ");
     }
 
-    private static void Task2() {
+    private static void task2() {
         System.out.println("Задание №2 ");
         final int ARREY_SIZE = 100;
         int[] massiv2 = new int[ARREY_SIZE];
@@ -49,7 +49,7 @@ public class HomeWork3 {
         System.out.println(" ");
     }
 
-    private static void Task3() {
+    private static void task3() {
         System.out.println("Задание №3 ");
         int[] massiv3 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
 
@@ -64,7 +64,7 @@ public class HomeWork3 {
         System.out.println(" ");
     }
 
-    private static void Task4() {
+    private static void task4() {
 
         System.out.println("Задание №4 ");
         final int MAS_SIZE = 10;
@@ -82,7 +82,7 @@ public class HomeWork3 {
 
 
     //  Начало задачи №5
-    private static void Task5(int len, int initialValue) {
+    private static void task5(int len, int initialValue) {
 
         System.out.println("Задание №5 ");
         int[] massiv5 = getmassiv5(len, initialValue);
@@ -99,7 +99,7 @@ public class HomeWork3 {
     }
 //  Конец задачи №5
 
-    private static void Task6() {
+    private static void task6() {
 
         System.out.println("Задание №6 ");
         int[] massiv6 = {1, 7, 4, 0, 13, 6};
@@ -111,12 +111,12 @@ public class HomeWork3 {
         System.out.println(" ");
     }
 
-    private static void Task7() {
+    private static void task7() {
 
         System.out.println("Задание №7 ");
     }
 
-    private static void Task8(int[] massiv8, int n) {
+    private static void task8(int[] massiv8, int n) {
 
         System.out.println("Задание №8 ");
 
