@@ -2,8 +2,9 @@ package Lesson6;
 
 import java.util.Scanner;
 
-public class Animal {
+public abstract class Animal {
 
+    public static String SPASE = " ";
     private String name;
     private String animalClass;
     public int run;
@@ -11,71 +12,45 @@ public class Animal {
     Scanner in = new Scanner(System.in);
 
 
-    public Animal(String name, String animalClass, int run, int swimming) {
+    public Animal(String name, String animalClass) {
         this.name = name;
         this.animalClass = animalClass;
         this.run = Math.abs(run);
         this.swimming = Math.abs(swimming);
     }
 
+    void printInfo() {System.out.println(this);}
+
     @Override
     public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", animalClass='" + animalClass + '\'' +
-                ", run=" + run +
-                ", swimming=" + swimming +
-                ", in=" + in +
-                '}';
+        return String.format("РРјСЏ Р·РІРµСЂСЏ: %s\nРљР»Р°СЃСЃ Р·РІРµСЂСЏ: %s\n", name, animalClass);
     }
 
-    void printInfo() {
-        System.out.println(this);
-    }
+    public abstract void run();
 
-    public void run() {
-
-
-
-    }
-
-    public void swim() {
-
-    }
+    public abstract void swim();
 
     public int getRun() {
-        System.out.println("Введите дистанцию для бега:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РґРёСЃС‚Р°РЅС†РёСЋ РґР»СЏ Р±РµРіР°:");
         run = in.nextInt();
         return run;
     }
-
-    public void setRun(int run) {
-        this.run = run;
-    }
-
     public int getSwimming() {
-        System.out.println("Введите дистанцию для плавания:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РґРёСЃС‚Р°РЅС†РёСЋ РґР»СЏ РїР»Р°РІР°РЅРёСЏ:");
         swimming = in.nextInt();
         return swimming;
-    }
-
-    public void setSwimming(int swimming) {
-        this.swimming = swimming;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getAnimalClass() {
         return animalClass;
     }
 
-    public void setAnimalClass(String animalClass) {
-        this.animalClass = animalClass;
+    public static void action(Animal animal) {
+        animal.run();
+        animal.swim();
     }
 }
