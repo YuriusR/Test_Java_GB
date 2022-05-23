@@ -75,7 +75,6 @@ public class HomeWork4 {
                 break;
             }
 
-
             aiTurn();
 
             if (checkEnd(DOT_AI)) {
@@ -128,6 +127,7 @@ public class HomeWork4 {
     private static boolean checkEnd(char symbol) {
 
         if (checkWin(symbol)) {
+            printMap();
             if (symbol == DOT_HUMAN) {
                 System.out.println("Ты Победил," + " " + name + "," + " " + "кожаный Мешок!");
                 return true;
@@ -152,32 +152,63 @@ public class HomeWork4 {
     }
 
     private static boolean checkWinD2() {
+        int chekD2 = 0;
+        for (int i = 0; i < size; i++) {
+
+            if (MAP[i][size - 1] == lastTurn) {
+                chekD2++;
+            } else chekD2 = 0;
+        }
+        if (chekD2 == dotsTOwin) {
+            return true;
+        }
         return false;
     }
 
     private static boolean checkWinD1() {
+        int chekD1 = 0;
+        for (int i = 0; i < size; i++) {
 
+            if (MAP[i][i] == lastTurn) {
+                chekD1++;
+            } else chekD1 = 0;
+        }
+        if (chekD1 == dotsTOwin) {
+            return true;
+        }
         return false;
     }
 
     private static boolean checkWinRow() {
-
-        return false;
-    }
-
-    private static boolean checkWinColumn() {
-
-        int checkColumn = 0;
+        int checkRow = 0;
         for (char[] chars : MAP) {
-            for (int columnNumber : chars) {
-                if (columnNumber == lastTurn) {
-                    checkColumn = (+1);
-                } else checkColumn = 0;
+            for (int rowNumber : chars) {
+                if (rowNumber == lastTurn) {
+                    checkRow++;
+                } else checkRow = 0;
             }
-            if (checkColumn == dotsTOwin) {
+            if (checkRow == dotsTOwin) {
                 return true;
             }
         }
+        return false;
+    }
+
+    private static boolean checkWinColumn() {  //РАЗОБРАТЬСЯ С КОЛОНКОЙ
+
+        int checkColumn = 0;
+  /*      for (int i = 0; i < size; )  {
+            for (int j = 0; j < rowNumber; j++) {
+                if (MAP[i][j] == lastTurn) {
+                    checkColumn++;
+            }else checkColumn = 0;
+
+            }if (checkColumn == dotsTOwin) {
+                return true;
+            }
+
+        }*/
+
         return false;
     }
 

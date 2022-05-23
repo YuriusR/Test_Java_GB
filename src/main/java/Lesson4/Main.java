@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     static final Scanner in = new Scanner(System.in);
+    private static String name;
 
     public static void main(String[] args) {
         HomeWork4.turnGame();
@@ -15,12 +16,11 @@ public class Main {
 
     public static String getName() {
         System.out.println("Как тебя зовут, Человек?");
-        String name = in.nextLine();
+        name = in.nextLine();
         return name;
     }
 
     public static int getSize() {
-//        System.out.println("Напиши размер поля от 3 до 9");
         int d = getSizeFromScanner("Введите число в пределах от 3 до 9", 3,
                 9);
         return d;
