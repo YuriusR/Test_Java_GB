@@ -6,7 +6,6 @@ public class MainApp {
     static int animalsCount = 0;
     static int dogsCount = 0;
     static int catsCount = 0;
-    private static Animal Object;
 
     public static void main(String[] args) {
 
@@ -18,9 +17,8 @@ public class MainApp {
 
         for (Animal animal : animals) {
             animalsCount++;
-            Object = animal;
             animal.printInfo();
-            Animal.action(Object);
+            Animal.action(animal);
             System.out.println("-----------");
             if (animal.getAnimalClass() == "Dog") {
                 dogsCount++;
