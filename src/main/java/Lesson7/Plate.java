@@ -1,9 +1,11 @@
 package Lesson7;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Scanner;
+
+import static Lesson7.Cat.appetite;
 
 public class Plate {
-
+    static final Scanner in = new Scanner(System.in);
     private static int food;
 
     public Plate(int food) {
@@ -18,24 +20,37 @@ public class Plate {
         return "В тарелке" + " " + food + " " + "еды";
     }
 
-    public static void food(int appetite) {
+    public static boolean food(int appetite) {
         int foodCount;
-        if ((food-appetite) >0 || (food-appetite) == 0) {
-            food -= appetite;
-        }else System.out.println("Коту" + " " + Cat.getName() + " " + "не хватило еды");
+        if ((food - appetite) > 0 || (food - appetite) == 0) {
+            return true;
 
-
-
-        //food += ThreadLocalRandom.current().nextInt((2)+3);
+        } else return false;
     }
 
-    public int getFood() {
+    public static int getFood() {
 
         return food;
     }
 
     public boolean checkSatiety(int satiety) {
+        if (satiety == appetite) {
+            return true;
+        } else return false;
+    }
 
-        return false;
+    public static void eat(Cat cat) {
+        if (food(appetite)) {
+            food -= appetite;
+            System.out.println("Кот" + " " + Cat.getName() + " " + " съел" + " " + Cat.getAppetite() + " еды");
+        } else {
+            System.out.println("Коту" + " " + Cat.getName() + " " + "не хватило еды");
+            System.out.println("Сколько хотите добавить корма?");
+            food = (food + in.nextInt());
+        }
+//        plate.printInfo();
+        //        System.out.printf("%s съел %d корма\n", name, appetite);
+        System.out.println("------");
+
     }
 }

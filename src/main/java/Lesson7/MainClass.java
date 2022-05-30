@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class MainClass {
 
 
-
     public static void main(String[] args) throws InterruptedException {
         Cat cat1 = new Cat("Барсик", 4);
         Cat cat2 = new Cat("Максик", 5);
@@ -17,9 +16,11 @@ public class MainClass {
         Cat[] cats = {cat1, cat2, cat3, cat4};
 
         for (Cat cat : cats) {
-            Cat.eat(plate);
-            /*else System.out.println("Коту" + " " + cat.getName() + " " + "не хватило еды")*/;
-            plate.printInfo();Thread.sleep(1000);
+            Plate.eat(cat);
+            /*else System.out.println("Коту" + " " + cat.getName() + " " + "не хватило еды")*/
+            ;
+            plate.printInfo();
+            Thread.sleep(1000);
         }
         System.out.println("УРРА! Все кошки сыты");
 

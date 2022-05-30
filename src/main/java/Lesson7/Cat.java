@@ -12,22 +12,7 @@ public class Cat {
         Cat.appetite = appetite;
     }
 
-
-
-    public static void eat(Plate plate) {
-        if (!satiety) {
-            System.out.println("Кот" + " " + getName() + " " + " съел" + getAppetite() + " еды");
-            satiety=true;
-        }
-
-
-        plate.printInfo();
-        Plate.food(appetite);
-//        System.out.printf("%s съел %d корма\n", name, appetite);
-        System.out.println("------");
-    }
-
-    public boolean isSatiety() {
+    public static boolean isSatiety() {
         return satiety;
     }
 
