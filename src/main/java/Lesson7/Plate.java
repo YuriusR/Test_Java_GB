@@ -2,14 +2,14 @@ package Lesson7;
 
 import java.util.Scanner;
 
-import static Lesson7.Cat.appetite;
+//import static Lesson7.Cat.appetite;
 
 public class Plate {
     static final Scanner in = new Scanner(System.in);
-    private static int food;
+    public   int food;
 
     public Plate(int food) {
-        Plate.food = Math.abs(food);
+        this.food = Math.abs(food);
     }
 
     public void printInfo() {
@@ -20,31 +20,32 @@ public class Plate {
         return "В тарелке" + " " + food + " " + "еды";
     }
 
-    public static boolean food(int appetite) {
-        int foodCount;
+    public boolean food(int appetite) {
+
         if ((food - appetite) > 0 || (food - appetite) == 0) {
             return true;
 
         } else return false;
     }
 
-    public static int getFood() {
+    public int getFood() {
 
         return food;
     }
 
-    public boolean checkSatiety(int satiety) {
+    /*public static boolean checkSatiety(int satiety, int appetite) {
         if (satiety == appetite) {
             return true;
         } else return false;
-    }
+    }*/
 
-    public static void eat(Cat cat) {
-        if (food(appetite)) {
-            food -= appetite;
-            System.out.println("Кот" + " " + Cat.getName() + " " + " съел" + " " + Cat.getAppetite() + " еды");
+    public void eat(Cat cat) {
+
+        if (food(cat.getAppetite())) {
+            food -= cat.appetite;
+            System.out.println("Кот" + " " + cat.name + " " + " съел" + " " + cat.appetite + " еды");
         } else {
-            System.out.println("Коту" + " " + Cat.getName() + " " + "не хватило еды");
+            System.out.println("Коту" + " " + cat.name + " " + "не хватило еды");
             System.out.println("Сколько хотите добавить корма?");
             food = (food + in.nextInt());
         }
@@ -52,5 +53,6 @@ public class Plate {
         //        System.out.printf("%s съел %d корма\n", name, appetite);
         System.out.println("------");
 
+//        return cat;
     }
 }
