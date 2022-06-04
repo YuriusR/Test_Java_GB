@@ -7,30 +7,13 @@ public class Cat {
     public boolean satiety = false;
 
 
-    public Cat(String name, int appetite, boolean satiety) {
+    public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
         this.satiety = satiety;
     }
 
-    public boolean isSatiety() {
-
-        return satiety;
-    }
-    public static boolean checkSatiety(int satiety, int appetite) {
-        if (satiety == appetite) {
-            return true;
-        } else return false;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public int getAppetite() {
-        return appetite;
-    }
-
-    public void setAppetite(int appetite) {
-        this.appetite = appetite;
+    public void eat(Plate p) {
+        p.decreaseFood(appetite);
     }
 }
