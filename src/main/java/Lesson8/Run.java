@@ -1,5 +1,5 @@
 package Lesson8;
 
 public interface Run {
-    void run();
+    void run(Obstacles obstacles);
 }

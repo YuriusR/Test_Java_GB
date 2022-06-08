@@ -13,10 +13,19 @@ public class Robot implements Participant {
 
 
 
-    public void run(){
-        System.out.println(name + " " + "пробежал");
+    public void run(Obstacles obstacles) {
+
+        if ((obstacles.getLengthTreadmill()) <= run) {
+            System.out.println(name + " " + "пробежал по дорожке");
+        } else
+            System.out.println(name + " " + "не смог пробежать и сходит с дистанции");
+
     }
-    public void jump(){
-        System.out.println(name + " " + "подпрыгнул");
+
+    public void jump(Obstacles obstacles) {
+        if (obstacles.getHeightWall() <= jump){
+            System.out.println(name + " " + "перепрыгнул стену");
+        } else System.out.println(name + " " + "не смог перепрыгнуть эту стену и сходит с дистанции");
+
     }
 }

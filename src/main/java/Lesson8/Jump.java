@@ -1,5 +1,5 @@
 package Lesson8;
 
 public interface Jump {
-    void jump();
+    void jump(Obstacles obstacles);
 }
