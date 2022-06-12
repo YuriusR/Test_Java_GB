@@ -6,13 +6,6 @@ public class Competition {
     private Obstacles[] obstacles;
     private Participant[] participants;
 
-    public Competition() {
-        /*this.obstacles = obstacles;
-        this.participants = participants;*/
-        System.out.println(/*this*/);
-    }
-
-
     public void startCompetition() {
         for (Participant participant : participants) {
 
@@ -39,8 +32,4 @@ public class Competition {
     public void setParticipants(Participant[] participants) {
         this.participants = participants;
     }
-
-   /* public void setObstacles(Wall wall, Treadmill treadmill) {
-        this.obstacles = wall;
-    }*/
 }

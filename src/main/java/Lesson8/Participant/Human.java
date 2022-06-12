@@ -20,7 +20,7 @@ public class Human implements Participant {
 
     public int run() {
 
-        System.out.printf("%s %s бежит дистанцию%n", participantClass, name);
+        System.out.printf("%s %s бежит по треку%n", participantClass, name);
         return run;
     }
 

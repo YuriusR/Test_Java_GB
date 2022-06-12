@@ -15,11 +15,11 @@ public class MainAction {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("Кот","Барсик", 300, 5);
-        Robot robot = new Robot("Робот","AI_Boston", 500, 1);
-        Human human = new Human("Человек","Галиаф", 3000, 2);
-        Wall wall = new Wall(4);
-        Treadmill treadmill = new Treadmill(1000);
+        Cat cat = new Cat("Кот", "Барсик", 300, 5);
+        Robot robot = new Robot("Робот", "AI_Boston", 500, 1);
+        Human human = new Human("Человек", "Галиаф", 3000, 2);
+        Wall wall = new Wall("Стена",4);
+        Treadmill treadmill = new Treadmill("Трек",1000);
 
 
         Participant[] participant = {cat, robot, human};
@@ -29,26 +29,9 @@ public class MainAction {
         competition.setParticipants(participant);
 
         System.out.println("Участники:" + Arrays.toString(participant));
-        System.out.println( );
+        System.out.println("--------------------");
+        System.out.println("Препятствия:" + Arrays.toString(obstacles));
+        System.out.println("*********** СТАРТ ***********");
         competition.startCompetition();
-
-        /*for (Participant participant1 : participant) {
-            for (Obstacles obstacle : obstacles) {
-
-                competition(participant1, obstacle);
-            }
-
-        }*/
-
-
     }
-
-
-
-   /* public static void competition(Participant participant, Obstacles obstacles) {
-
-        participant.run(obstacles);
-        participant.jump(obstacles);
-
-    }*/
 }

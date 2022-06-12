@@ -10,7 +10,7 @@ public class Cat implements Participant {
 
 
     public Cat(String participantClass, String name, int run, int jump) {
-//        this.participantClass = participantClass;
+
         this.name = name;
         this.run = run;
         this.jump = jump;
@@ -21,22 +21,9 @@ public class Cat implements Participant {
         return name;
     }
 
-    public int getRun() {
-        return run;
-    }
-
-    public int getJump() {
-        return jump;
-    }
-
-    public String getParticipantClass() {
-
-        return participantClass;
-    }
-
     public int run() {
 
-        System.out.printf("%s %s бежит дистанцию%n", participantClass, name);
+        System.out.printf("%s %s бежит по треку%n", participantClass, name);
         return run;
     }
 

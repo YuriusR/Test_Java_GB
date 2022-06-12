@@ -1,7 +1,5 @@
 package Lesson8.Participant;
 
-import Lesson8.Competition.Obstacles;
-
 public class Robot implements Participant {
 
     private final String participantClass;
@@ -21,7 +19,7 @@ public class Robot implements Participant {
 
     public int run() {
 
-        System.out.printf("%s %s бежит дистанцию%n", participantClass, name);
+        System.out.printf("%s %s бежит по треку%n", participantClass, name);
         return run;
     }
 
