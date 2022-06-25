@@ -1,20 +1,31 @@
 package Lesson10.Task3;
 
-public class Fruit {
-    private String typeFruits;
-    private int weight;
+public abstract class Fruit {
+//    private String typeFruits;
+    private static double weight;
 
     static enum TypeFruits {
         APPLE, ORANGE
     }
 
-    public Fruit(String typeFruits, int weight) {
-        this.typeFruits = typeFruits;
+    public Fruit(double weight) {
+//        this.typeFruits = typeFruits;
         this.weight = weight;
     }
 
-    public Fruit() {
+//    public String getTypeFruits() {
+//        return typeFruits;
+//    }
+//
+//    public void setTypeFruits(String typeFruits) {
+//        this.typeFruits = typeFruits;
+//    }
 
+    public static double getWeight() {
+        return  weight;
+    }
 
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }
